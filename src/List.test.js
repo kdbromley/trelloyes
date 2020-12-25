@@ -11,7 +11,7 @@ describe('List component', () => {
     it('renders w/o crashing', () => {
         const div = document.createElement('div');
         ReactDOM.render(<List />, div);
-        ReactDOM.unmountComponentAtNode(div);
+        ReactDOM.unmountComponqentAtNode(div);
     });
 
     it('renders UI as expected', () => {
