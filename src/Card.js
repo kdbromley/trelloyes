@@ -5,13 +5,20 @@ title is a string of the card's title.
 content is a string of the card's content.
 These props will be passed in for each Card from the List component.
 */
+import './Card.css'
 
-
-function Card(props) {
+function Card(props) { 
+    
     return ( 
-     <div className='card'>
+     <div className='Card'>
         <h3>{props.title}</h3>
         <p>{props.content}</p>
+        <button 
+          type='button'
+          id={props.id}
+          onClick={() => props.onDeleteCard(props.id)} >
+         Delete
+          </button>
      </div> 
     )
 }

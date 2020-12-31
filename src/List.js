@@ -16,6 +16,7 @@ import Card from './Card'
 import './List.css'
 
 function List(props) {
+    console.log(props)
     return (
         <section className='list'>
             <header>
@@ -25,8 +26,10 @@ function List(props) {
                 {props.cards.map((card) => 
                 <Card 
                  key={card.id}
+                 id={card.id}
                  title={card.title} 
-                 content={card.content} />
+                 content={card.content}
+                 onDeleteCard={props.onDeleteCard} />
                  ) 
                 }
             </div>
